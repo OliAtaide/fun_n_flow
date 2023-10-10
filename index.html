@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light p-0 fixed-top">
+        <a title="Logo do site" class="navbar-brand p-0" href="#">
+            <img src="navbar_logo.svg" alt="">
+        </a>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Início</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">O Parque</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Atrações</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Eventos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+            </li>
+        </ul>
+        <button type="button" class="btn">
+            Reserve Já
+        </button>
+    </nav>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="placeholder.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="placeholder.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="placeholder.png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-chevron-left"></i>
+                </div>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <div class="d-flex align-items-center justify-content-center">
+                    <i class="bi bi-chevron-right"></i>
+                </div>
+            </button>
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1">
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2">
+                </button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3">
+                </button>
+            </div>
+        </div>
+        <div class="sobre-section">
+            <div class="section-subtitle">
+                A Fun & Flow é sua diversão na Lagoa de Pitangui.
+            </div>
+            <div class="section-title">
+                o oasis potiguar
+            </div>
+            <div class="row w-50 mx-auto mt-5">
+                <div class="col">
+                    <img src="pitangui_logo.svg" alt="">
+                </div>
+                <div class="col">
+                    <img src="logo.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="atracoes-section">
+            <h1>Pra você ficar</h1>
+            <h1>de boa na lagoa</h1>
+            <h1>ou dar nó em
+                <br>
+
+                pingo d’água!
+            </h1>
+        </div>
+        <div class="contato-section">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-5">
+                        <h1>
+                            RESERVE JÁ
+                            O SEU GRUPO!
+                        </h1>
+                    </div>
+                    <div class="col-7">
+                        <form action="">
+                            <form>
+                                <div class="form-control rounded-0">
+                                    <input type="text" class="border-0" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="NOME">
+                                </div>
+                                <div class="form-control rounded-0">
+                                    <input type="email" class="border-0" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="EMAIL">
+                                </div>
+                                <div class="form-control rounded-0">
+                                    <input type="email" class="border-0" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="ENDEREÇO">
+                                </div>
+                                <div class="form-control rounded-0">
+                                    <input type="email" class="border-0" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="TELEFONE">
+                                </div>
+                                <div class="form-control rounded-0">
+                                    <input type="email" class="border-0" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="NOME DO FILHO">
+                                </div>
+
+                                <button type="submit" class="btn rounded-0">Reservar Vagas</button>
+                            </form>
+                            <div class="whatsapp d-flex align-items-end justify-content-end">
+                                <i class="bi bi-whatsapp"></i>
+                                <span>84</span>
+                                <h1>
+                                    98200.1464
+                                </h1>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-fluid" src="logo.svg" alt="">
+                        <div class="footer-ig d-flex align-items-center gap-3 mt-5">
+                            <i class="bi bi-instagram"></i>
+                            <span>
+                                Acompanhe novidade
+                                e promoções!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <ul>
+                            <li>
+                                INICIO
+                            </li>
+                            <li>
+                                O PARQUE
+                            </li>
+                            <li>
+                                ATRAÇÕES
+                            </li>
+                            <li>
+                                PASSEIOS
+                            </li>
+                            <li>
+                                CONTATO
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-6">
+                        <div class="contatos text-end">
+                            <h5>
+                                CONTATO
+                            </h5>
+                            <span>
+                                <i class="bi bi-whatsapp"></i>
+                                84 98200.1464
+                            </span>
+                            <h5 class="mt-3">
+                                ESCRITÓRIO
+                            </h5>
+                            <p>
+                                Av. Amintas Barros 3700, sala 1607 - CTC Torre Business,
+                                <br>
+                                Lagoa Nova, Natal - RN, 59075-810
+                            </p>
+                            <h5 class="mt-3">
+                                PITANGUI LAGOA PARK
+                            </h5>
+                            <p>
+                                Extremoz - RN, 59575-000 Rua da Praia Seca, 2015
+                                <br>
+                                Parai de Pitangui, Natal/RN
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
