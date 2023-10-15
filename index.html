@@ -9,6 +9,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 
 <style>
@@ -94,13 +95,142 @@
             </div>
         </div>
         <div class="atracoes-section">
-            <h1>Pra você ficar</h1>
-            <h1>de boa na lagoa</h1>
-            <h1>ou dar nó em
-                <br>
-
-                pingo d’água!
-            </h1>
+            <div class="container">
+                <div class="section-title">
+                    <h1>
+                        Pra você ficar
+                    </h1>
+                    <h1>
+                        de boa na lagoa
+                    </h1>
+                    <h1>
+                        ou dar nó em
+                    </h1>
+                    <h1>
+                        pingo d’água!
+                    </h1>
+                    <div class="d-flex">
+                        <p>
+                            CONFIRA AS ATRAÇÕES QUE VOCÊ
+                            <br>
+                            PODE ENCONTRAR NO PITANGUI LAGOA PARK
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="placeholder.png" alt="" class="img-fluid">
+                                <h1 class="card-title">
+                                    Hello World
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="eventos-section">
+            <div class="row">
+                <div class="col">
+                    <img class="img-fluid" src="imgs/polaroids1.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="d-flex flex-column me-5">
+                        <h1 class="section-title">
+                            UMA EXPERIÊNCIA
+                            PERSONALIZADA
+                            PARA SEU GRUPO
+                        </h1>
+                        <h3 class="section-subtitle">
+                            RESERVE UM EXPERIÊNCIA COMPLETA PARA
+                            GRUPOS DE TODOS OS TAMANHOS COM
+                            AS MAIS DIVERSAS OPÇÕES DE LAZER.
+                        </h3>
+                        <button class="btn section-btn">
+                            CONFIRA NOSSOS EVENTOS
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="trilhas-section">
+            <div class="container">
+                <div class="w-50">
+                    <h1 class="section-title">
+                        <span>
+                            TRILHAS
+                        </span>
+                        <span>
+                            ECOLÓGICAS
+                            & RADICAIS
+                        </span>
+                    </h1>
+                    <p class="section-subtitle">
+                        GUIAS EXPERIENTES TE ENSINAM TUDO
+                        SOBRE A FAUNA E FLORA VEGETAL COM
+                        SEGURANÇA OU TE LEVAM PARA UMA
+                        AVENTURA EMOCIONANTE NO
+                        ECOSSISTEMA LOCAL.
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="contato-section">
             <div class="container py-5">
@@ -149,6 +279,7 @@
                 </div>
             </div>
         </div>
+
     </main>
     <footer>
         <div class="footer-section">
@@ -217,6 +348,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: -32,
+            centeredSlides: false,
+            grabCursor: true,
+            keyboard: {
+                enabled: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
 </body>
 
 </html>
