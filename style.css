@@ -265,6 +265,22 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
+.atracoes-section .swiper-button-prev, .atracoes-section .swiper-button-next {
+  border: 3px solid #122f59;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.atracoes-section .swiper-button-prev:after, .atracoes-section .swiper-button-next:after {
+  font-size: 32px !important;
+  color: #122f59;
+}
+.atracoes-section .swiper-button-prev:after {
+  padding-right: 8px;
+}
+.atracoes-section .swiper-button-next:after {
+  padding-left: 8px;
+}
 .atracoes-section .swiper-slide {
   border-bottom: 5px solid #595959;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2509803922);
