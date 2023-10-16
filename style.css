@@ -90,11 +90,28 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0) 5em);
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
   margin-top: -5em;
   padding-top: 10em;
   min-height: 100vh;
+}
+.atracoes-section .atracoes-img {
+  position: absolute;
+}
+.atracoes-section .atracoes-boia {
+  left: -120px;
+  top: 360px;
+  width: 480px;
+}
+.atracoes-section .atracoes-catapulta {
+  right: -240px;
+  top: -120px;
+  width: 1280px;
+}
+.atracoes-section .section-title {
+  position: sticky;
 }
 
 .carousel-indicators {
@@ -130,13 +147,25 @@ main {
 }
 
 .contato-section {
-  background-color: #0f0e3d;
+  background: linear-gradient(0deg, hsla(241deg, 63%, 15%, 0.9), hsla(241deg, 63%, 15%, 0.9)), url("imgs/bg3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.contato-section .contato-boia {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 480px;
+  z-index: 0;
 }
 .contato-section h1 {
   color: white;
   font-family: "Poppins", "sans-serif";
   font-size: 70px;
   font-weight: 500;
+  position: sticky;
 }
 .contato-section .form-control {
   margin-bottom: 1em;
@@ -265,13 +294,15 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-.atracoes-section .swiper-button-prev, .atracoes-section .swiper-button-next {
+.atracoes-section .swiper-button-prev,
+.atracoes-section .swiper-button-next {
   border: 3px solid #122f59;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
-.atracoes-section .swiper-button-prev:after, .atracoes-section .swiper-button-next:after {
+.atracoes-section .swiper-button-prev:after,
+.atracoes-section .swiper-button-next:after {
   font-size: 32px !important;
   color: #122f59;
 }
@@ -292,7 +323,8 @@ main {
   z-index: 99;
 }
 
-.eventos-section, .trilhas-section {
+.eventos-section,
+.trilhas-section {
   position: sticky;
   margin-top: -200px;
   background-size: cover;
@@ -351,6 +383,13 @@ main {
 .trilhas-section .section-subtitle {
   margin-top: 50px;
   font-size: 32px;
+}
+
+.disclamer {
+  background-color: #7fb932;
+  font-size: 18px;
+  text-align: center;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

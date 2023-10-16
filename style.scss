@@ -104,6 +104,27 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+
+    .atracoes-img{
+        position: absolute;
+    }
+
+    .atracoes-boia{
+        left: -120px;
+        top: 360px;
+        width: 480px;
+    }
+
+    .atracoes-catapulta{
+        right: -240px;
+        top: -120px;
+        width: 1280px;
+    }
+
+    .section-title{
+        position: sticky;
+    }
 
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 5em);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -147,12 +168,27 @@ main {
 }
 
 .contato-section {
-    background-color: #0f0e3dff;
+    background: linear-gradient(0deg, hsla(241, 63%, 15%, 0.9), hsla(241, 63%, 15%, 0.9)),
+    url("imgs/bg3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    .contato-boia{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 480px;
+        z-index: 0;
+    }
+
     h1 {
         color: white;
         font-family: "Poppins", "sans-serif";
         font-size: 70px;
         font-weight: 500;
+        position: sticky;
     }
 
     .form-control {
@@ -302,26 +338,26 @@ main {
         margin-right: auto;
     }
 
-    .swiper-button-prev, .swiper-button-next{
+    .swiper-button-prev,
+    .swiper-button-next {
         border: 3px solid #122f59ff;
         width: 50px;
         height: 50px;
         border-radius: 50%;
 
-        &:after{
+        &:after {
             font-size: 32px !important;
             color: #122f59ff;
         }
     }
 
-    .swiper-button-prev:after{
+    .swiper-button-prev:after {
         padding-right: 8px;
     }
 
-    .swiper-button-next:after{
+    .swiper-button-next:after {
         padding-left: 8px;
     }
-
 
     .swiper-slide {
         //box-shadow: 0px 5px #595959ff;
@@ -338,7 +374,8 @@ main {
     }
 }
 
-.eventos-section, .trilhas-section{
+.eventos-section,
+.trilhas-section {
     position: sticky;
     margin-top: -200px;
     background-size: cover;
@@ -384,28 +421,35 @@ main {
         margin: 50px auto;
     }
 
-    img{
+    img {
         -webkit-filter: drop-shadow(10px 10px 10px #00000080);
         filter: drop-shadow(10px 10px 10px #00000080);
     }
 }
 
-.trilhas-section{
+.trilhas-section {
     color: white;
-    background-image: url('imgs/bg2.png');
+    background-image: url("imgs/bg2.png");
     padding-bottom: 100px;
 
-    .section-title{
+    .section-title {
         font-size: 72px;
         font-weight: bold;
 
-        span:last-child{
+        span:last-child {
             color: #fbb03bff;
         }
     }
 
-    .section-subtitle{
+    .section-subtitle {
         margin-top: 50px;
         font-size: 32px;
     }
+}
+
+.disclamer{
+    background-color: #7fb932ff;
+    font-size: 18px;
+    text-align: center;
+    color: white;
 }
