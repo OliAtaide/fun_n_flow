@@ -16,31 +16,38 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-light p-0 fixed-top">
-        <a title="Logo do site" class="navbar-brand p-0" href="#">
-            <img src="navbar_logo.svg" alt="">
-        </a>
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Início</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">O Parque</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Atrações</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Eventos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-            </li>
-        </ul>
-        <button type="button" class="btn">
-            Reserve Já
-        </button>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light p-0 fixed-top d-none d-sm-flex">
+            <a title="Logo do site" class="navbar-brand p-0" href="#">
+                <img src="navbar_logo.svg" alt="">
+            </a>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">O Parque</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Atrações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Eventos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contato</a>
+                </li>
+            </ul>
+            <button type="button" class="btn">
+                Reserve Já
+            </button>
+        </nav>
+        <nav class="navbar navbar-expand bg-light p-0 fixed-top d-sm-none">
+            <a title="Logo do site" class="navbar-brand p-0 mx-auto" href="#">
+                <img class="w-50" src="logo.svg" alt="">
+            </a>
+        </nav>
+    </header>
     <main>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-inner">
@@ -86,11 +93,11 @@
                 o oasis potiguar
             </div>
             <div class="row w-50 mx-auto mt-5">
-                <div class="col">
-                    <img src="pitangui_logo.svg" alt="">
+                <div class="col-sm">
+                    <img class="img-fluid" src="pitangui_logo.svg" alt="">
                 </div>
-                <div class="col">
-                    <img src="logo.svg" alt="">
+                <div class="col-sm">
+                    <img class="img-fluid" src="logo.svg" alt="">
                 </div>
             </div>
         </div>
@@ -131,11 +138,11 @@
         </div>
         <div class="eventos-section">
             <div class="row">
-                <div class="col">
+                <div class="col-sm">
                     <img class="img-fluid" src="imgs/polaroids1.png" alt="">
                 </div>
-                <div class="col">
-                    <div class="d-flex flex-column me-5">
+                <div class="col-sm">
+                    <div class="d-flex flex-column me-sm-5">
                         <h1 class="section-title">
                             UMA EXPERIÊNCIA
                             PERSONALIZADA
@@ -155,23 +162,26 @@
         </div>
         <div class="trilhas-section">
             <div class="container">
-                <div class="w-50">
-                    <h1 class="section-title">
-                        <span>
-                            TRILHAS
-                        </span>
-                        <span>
-                            ECOLÓGICAS
-                            & RADICAIS
-                        </span>
-                    </h1>
-                    <p class="section-subtitle">
-                        GUIAS EXPERIENTES TE ENSINAM TUDO
-                        SOBRE A FAUNA E FLORA VEGETAL COM
-                        SEGURANÇA OU TE LEVAM PARA UMA
-                        AVENTURA EMOCIONANTE NO
-                        ECOSSISTEMA LOCAL.
-                    </p>
+                <div class="row">
+                    <div class="col-sm">
+                        <h1 class="section-title">
+                            <span>
+                                TRILHAS
+                            </span>
+                            <span>
+                                ECOLÓGICAS
+                                & RADICAIS
+                            </span>
+                        </h1>
+                        <p class="section-subtitle">
+                            GUIAS EXPERIENTES TE ENSINAM TUDO
+                            SOBRE A FAUNA E FLORA VEGETAL COM
+                            SEGURANÇA OU TE LEVAM PARA UMA
+                            AVENTURA EMOCIONANTE NO
+                            ECOSSISTEMA LOCAL.
+                        </p>
+                    </div>
+                    <div class="col-sm"></div>
                 </div>
             </div>
         </div>
@@ -179,13 +189,13 @@
             <img class="contato-boia" src="imgs/boia2.png" alt="">
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-sm-5">
                         <h1>
                             RESERVE JÁ
                             O SEU GRUPO!
                         </h1>
                     </div>
-                    <div class="col-7">
+                    <div class="col-sm-7">
                         <form action="">
                             <form>
                                 <div class="form-control rounded-0">
@@ -228,7 +238,7 @@
         <div class="footer-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-sm-3">
                         <img class="img-fluid" src="logo.svg" alt="">
                         <div class="footer-ig d-flex align-items-center gap-3 mt-5">
                             <i class="bi bi-instagram"></i>
@@ -238,8 +248,8 @@
                             </span>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <ul>
+                    <div class="col-sm-3">
+                        <ul class="d-none d-sm-block">
                             <li>
                                 INICIO
                             </li>
@@ -257,7 +267,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <div class="contatos text-end">
                             <h5>
                                 CONTATO
@@ -302,8 +312,8 @@
     <script>
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            slidesPerView: 3,
-            slidesPerGroup: 2,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
             spaceBetween: -32,
             centeredSlides: false,
             grabCursor: true,
@@ -314,6 +324,12 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
+            breakpoints: {
+                576: {
+                    slidesPerView: 3,
+                    slidesPerGroup: 2,
+                },
+            }
         });
     </script>
 

@@ -78,18 +78,22 @@ main {
   font-size: 48px;
 }
 
+.sobre-section,
+.atracoes-section,
+.contato-section,
+.eventos-main {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .sobre-section {
   background: linear-gradient(white, #9fdef4 33%, transparent 66%), url("imgs/pitangui.png") no-repeat;
-  background-position: center;
-  background-size: cover;
   min-height: 12em;
 }
 
 .atracoes-section {
   background-image: url("imgs/areia.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(0, 0, 0) 5em);
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
@@ -148,9 +152,6 @@ main {
 
 .contato-section {
   background: linear-gradient(0deg, hsla(241deg, 63%, 15%, 0.9), hsla(241deg, 63%, 15%, 0.9)), url("imgs/bg3.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
 }
 .contato-section .contato-boia {
@@ -390,6 +391,140 @@ main {
   font-size: 18px;
   text-align: center;
   color: white;
+}
+
+.eventos-main {
+  background-image: url("imgs/bg4.jpg");
+  overflow: hidden;
+}
+.eventos-main .container {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+}
+.eventos-main .swiper img {
+  aspect-ratio: 6/7;
+  object-fit: cover;
+  border-radius: 40px;
+}
+.eventos-main .swiper .evento-title {
+  text-align: center;
+}
+.eventos-main .section-title {
+  text-align: end;
+  display: inline-block;
+}
+.eventos-main .section-title h1 {
+  font-size: 80px;
+  font-weight: 500;
+  color: white;
+}
+.eventos-main .section-title h1:not(:first-child) {
+  color: #1b1464;
+}
+.eventos-main .section-title h1:nth-child(2) {
+  background-color: #7fb932;
+}
+.eventos-main .papel {
+  width: 100%;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5019607843));
+  filter: drop-shadow(0 -10px 10px rgba(0, 0, 0, 0.5019607843));
+}
+
+.eventos-title {
+  background-image: url("imgs/titulo.png");
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5019607843));
+  filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5019607843));
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 300px;
+  background-position-x: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: sticky;
+  z-index: 99;
+  margin-top: -192px;
+}
+.eventos-title h1 {
+  font-size: 72px;
+  rotate: 2.5deg;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel img {
+    aspect-ratio: 4/3;
+    height: auto;
+  }
+  .sobre-section .section-subtitle {
+    font-size: 18px;
+    padding: 0 25%;
+  }
+  .sobre-section .section-title {
+    font-size: 90px;
+  }
+  .atracoes-section .section-title h1 {
+    font-size: 40px;
+  }
+  .atracoes-section .section-title h1:first-child {
+    color: #1b1464;
+    margin: 0 auto;
+  }
+  .atracoes-section .section-title h1:nth-child(2) {
+    background-color: #7fb932;
+  }
+  .atracoes-section .section-title h1:nth-child(3) {
+    background-color: #00add9;
+    margin: 0 27px;
+  }
+  .atracoes-section .section-title h1:nth-child(4) {
+    background-color: #00add9;
+    margin-left: 54px;
+  }
+  .eventos-section .section-title,
+  .eventos-section .section-subtitle,
+  .trilhas-section .section-title,
+  .trilhas-section .section-subtitle {
+    padding-top: 1em;
+    text-align: center;
+    margin: 0 1em;
+    -webkit-filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5019607843));
+    filter: drop-shadow(0 0 5px #000000);
+  }
+  .eventos-section .section-title,
+  .trilhas-section .section-title {
+    font-size: 36px;
+  }
+  .eventos-section .section-subtitle, .eventos-section .section-btn,
+  .trilhas-section .section-subtitle,
+  .trilhas-section .section-btn {
+    font-size: 16px;
+  }
+  .trilhas-section {
+    margin-top: 0;
+  }
+  .contato-section h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .contato-boia {
+    display: none;
+  }
+  .whatsapp i, .whatsapp span {
+    font-size: 24px !important;
+  }
+  .whatsapp h1 {
+    font-size: 40px !important;
+  }
+  .contatos {
+    text-align: center !important;
+    margin-top: 1em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

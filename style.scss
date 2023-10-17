@@ -89,40 +89,44 @@ main {
     font-size: 48px;
 }
 
+.sobre-section,
+.atracoes-section,
+.contato-section,
+.eventos-main {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .sobre-section {
     //background-image: linear-gradient(white, #9fdef4ff 33%);
     background:
         linear-gradient(white, #9fdef4ff 33%, transparent 66%),
         url("imgs/pitangui.png") no-repeat;
-    background-position: center;
-    background-size: cover;
     min-height: 12em;
 }
 
 .atracoes-section {
     background-image: url("imgs/areia.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
 
-    .atracoes-img{
+    .atracoes-img {
         position: absolute;
     }
 
-    .atracoes-boia{
+    .atracoes-boia {
         left: -120px;
         top: 360px;
         width: 480px;
     }
 
-    .atracoes-catapulta{
+    .atracoes-catapulta {
         right: -240px;
         top: -120px;
         width: 1280px;
     }
 
-    .section-title{
+    .section-title {
         position: sticky;
     }
 
@@ -168,14 +172,10 @@ main {
 }
 
 .contato-section {
-    background: linear-gradient(0deg, hsla(241, 63%, 15%, 0.9), hsla(241, 63%, 15%, 0.9)),
-    url("imgs/bg3.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(0deg, hsla(241, 63%, 15%, 0.9), hsla(241, 63%, 15%, 0.9)), url("imgs/bg3.jpg");
     position: relative;
 
-    .contato-boia{
+    .contato-boia {
         position: absolute;
         left: 0;
         bottom: 0;
@@ -447,9 +447,175 @@ main {
     }
 }
 
-.disclamer{
+.disclamer {
     background-color: #7fb932ff;
     font-size: 18px;
     text-align: center;
     color: white;
+}
+
+// evento.html
+
+.eventos-main {
+    background-image: url("imgs/bg4.jpg");
+
+    .container {
+        display: flex;
+        align-items: end;
+        flex-direction: column;
+    }
+
+    .swiper {
+        img {
+            aspect-ratio: 6 / 7;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+
+        .evento-title {
+            text-align: center;
+        }
+    }
+
+    .section-title {
+        text-align: end;
+        display: inline-block;
+
+        h1 {
+            font-size: 80px;
+            font-weight: 500;
+            color: white;
+
+            &:not(:first-child) {
+                color: #1b1464ff;
+            }
+
+            &:nth-child(2) {
+                background-color: #7fb932ff;
+            }
+        }
+    }
+
+    .papel {
+        width: 100%;
+        -webkit-filter: drop-shadow(10px 10px 10px #00000080);
+        filter: drop-shadow(0 -10px 10px #00000080);
+    }
+
+    overflow: hidden;
+}
+
+.eventos-title {
+    background-image: url("imgs/titulo.png");
+    -webkit-filter: drop-shadow(10px 10px 10px #00000080);
+    filter: drop-shadow(0 10px 10px #00000080);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 300px;
+    background-position-x: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: sticky;
+    z-index: 99;
+    margin-top: -192px;
+
+    h1 {
+        font-size: 72px;
+        rotate: 2.5deg;
+        font-weight: 500;
+    }
+}
+
+// mobile
+
+@media screen and (max-width: 576px) {
+    .carousel img {
+        aspect-ratio: 4 / 3;
+        height: auto;
+    }
+
+    .sobre-section {
+        .section-subtitle {
+            font-size: 18px;
+            padding: 0 25%;
+        }
+
+        .section-title {
+            font-size: 90px;
+        }
+    }
+
+    .atracoes-section {
+        .section-title h1 {
+            font-size: 40px;
+
+            &:first-child {
+                color: #1b1464ff;
+                margin: 0 auto;
+            }
+            &:nth-child(2) {
+                background-color: #7fb932ff;
+            }
+            &:nth-child(3) {
+                background-color: #00add9ff;
+                margin: 0 27px;
+            }
+            &:nth-child(4) {
+                background-color: #00add9ff;
+                margin-left: 54px;
+            }
+        }
+    }
+
+    .eventos-section,
+    .trilhas-section {
+        .section-title,
+        .section-subtitle {
+            padding-top: 1em;
+            text-align: center;
+            margin: 0 1em;
+            -webkit-filter: drop-shadow(0 0 10px #00000080);
+            filter: drop-shadow(0 0 5px #000000);
+        }
+        .section-title {
+            font-size: 36px;
+        }
+
+        .section-subtitle, .section-btn {
+            font-size: 16px;
+        }
+    }
+
+    .trilhas-section {
+        margin-top: 0;
+    }
+
+    .contato-section h1{
+        font-size: 36px;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .contato-boia{
+        display: none;
+    }
+    
+    .whatsapp{
+        i, span{
+            font-size: 24px !important;
+        }
+
+        h1{
+            font-size: 40px !important;
+        }
+    }
+
+    .contatos{
+        text-align: center !important;
+        margin-top: 1em;
+    }
 }
