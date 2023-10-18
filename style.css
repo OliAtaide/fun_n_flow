@@ -57,16 +57,16 @@ main {
   position: absolute;
 }
 
-.carousel {
+.index-carousel .carousel {
   margin-bottom: -120px;
 }
-.carousel img {
+.index-carousel .carousel img {
   height: 800px;
   object-fit: cover;
   border-radius: 0 0 120px 120px;
 }
-.carousel .carousel-control-prev .d-flex,
-.carousel .carousel-control-next .d-flex {
+.index-carousel .carousel .carousel-control-prev .d-flex,
+.index-carousel .carousel .carousel-control-next .d-flex {
   background-color: white;
   border-radius: 50%;
   width: 72px;
@@ -454,6 +454,9 @@ main {
   rotate: 2.5deg;
   font-weight: 500;
 }
+.eventos-title h1:last-child {
+  margin-bottom: 0.5em;
+}
 
 @media screen and (max-width: 576px) {
   .carousel img {
@@ -499,7 +502,8 @@ main {
   .trilhas-section .section-title {
     font-size: 36px;
   }
-  .eventos-section .section-subtitle, .eventos-section .section-btn,
+  .eventos-section .section-subtitle,
+  .eventos-section .section-btn,
   .trilhas-section .section-subtitle,
   .trilhas-section .section-btn {
     font-size: 16px;
@@ -515,7 +519,8 @@ main {
   .contato-boia {
     display: none;
   }
-  .whatsapp i, .whatsapp span {
+  .whatsapp i,
+  .whatsapp span {
     font-size: 24px !important;
   }
   .whatsapp h1 {
@@ -525,6 +530,86 @@ main {
     text-align: center !important;
     margin-top: 1em;
   }
+}
+.eventos-main2 {
+  position: relative;
+  padding: 100px 0;
+}
+.eventos-main2 .bg-img {
+  position: absolute;
+  height: 200px;
+  width: 100%;
+  bottom: 0;
+}
+.eventos-main2 .col .btn {
+  position: relative;
+}
+.eventos-main2 .btn-label {
+  position: absolute;
+  font-size: 25px;
+  padding: 0.5em 1em;
+  margin: 0 3em;
+  background-image: linear-gradient(to right, #2756a1, #00add8);
+  color: white;
+  top: 0;
+}
+
+.album-modal .modal-dialog {
+  max-width: 50%;
+  width: auto;
+}
+.album-modal .modal-content {
+  background-color: transparent;
+}
+.album-modal .modal-content .btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  background-color: white;
+  margin-left: auto;
+  font-size: 20px;
+  text-transform: uppercase;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+  margin-bottom: 0.5em;
+}
+.album-modal .modal-content .btn i {
+  line-height: 0;
+}
+.album-modal .modal-content .btn:hover {
+  opacity: 1;
+}
+.album-modal .carousel-item {
+  padding: 30px;
+  border-radius: 0;
+  background-color: white;
+}
+.album-modal .carousel-control-prev {
+  left: -18px;
+}
+.album-modal .carousel-control-prev i {
+  margin-right: 8px;
+}
+.album-modal .carousel-control-next {
+  right: -18px;
+}
+.album-modal .carousel-control-next i {
+  margin-left: 8px;
+}
+.album-modal .carousel-control-prev,
+.album-modal .carousel-control-next {
+  top: calc(50% - 36px);
+  background-color: white;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+}
+.album-modal .carousel-control-prev .d-flex,
+.album-modal .carousel-control-next .d-flex {
+  border: 3px solid #122f59;
+  border-radius: 50%;
+  width: 75%;
+  height: 75%;
 }
 
 /*# sourceMappingURL=style.css.map */

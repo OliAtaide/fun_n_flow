@@ -44,6 +44,33 @@
         </nav>
     </header>
     <main>
+        <div class="modal fade album-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <button class="btn rounded-pill" data-bs-dismiss="modal" aria-label="Close">
+                        Fechar Álbum
+                        <i class="bi bi-x-circle"></i>
+                    </button>
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="prev">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="bi bi-chevron-left"></i>
+                            </div>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                            data-bs-slide="next">
+                            <div class="d-flex align-items-center justify-content-center">
+                                <i class="bi bi-chevron-right"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="eventos-main">
             <div class="container">
                 <div class="section-title">
@@ -84,8 +111,28 @@
             </h1>
         </div>
         <div class="eventos-main2">
+            <img class="bg-img" src="imgs/bg5.jpg" alt="">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <img class="img-fluid" src="imgs/btn01.png" alt="">
+                            <div class="btn-label rounded-pill">
+                                ENJE - Encontro Nacional
+                                de Jovens Empresários
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn">
+                            <img class="img-fluid" src="imgs/btn02.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
@@ -109,6 +156,20 @@
                 prevEl: ".swiper-button-prev",
             },
         });
+
+        let album = [
+            "imgs/album/_MG_0002.jpg", "imgs/album/DSC_0002.jpg", "imgs/album/DSC_0027.jpg", "imgs/album/DSC_0039.jpg", "imgs/album/DSC_0060.jpg", "imgs/album/DSC_0106.jpg", "imgs/album/DSC_0111.jpg", "imgs/album/DSC_0151.jpg", "imgs/album/DSC_0170.jpg", "imgs/album/DSC_0171.jpg", "imgs/album/DSC_0177.jpg", "imgs/album/DSC_0312.jpg", "imgs/album/DSC_0341.jpg", "imgs/album/DSC_0361.jpg", "imgs/album/DSC_0383.jpg", "imgs/album/DSC_0396.jpg", "imgs/album/DSC_0415.jpg", "imgs/album/DSC_0420.jpg", "imgs/album/DSC_0422.jpg", "imgs/album/DSC_0453.jpg", "imgs/album/DSC_0481.jpg", "imgs/album/DSC_0493.jpg", "imgs/album/DSC_0510.jpg"
+        ]
+
+        album.forEach(function (v, i) {
+            $('.carousel-inner').append(
+                `
+                <div class="carousel-item ${i == 0 ? 'active' : ''}">
+                    <img src="${v}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                `
+            )
+        })
     </script>
 </body>
 
