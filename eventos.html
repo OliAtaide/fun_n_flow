@@ -17,30 +17,35 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light p-0 fixed-top">
-            <a title="Logo do site" class="navbar-brand p-0" href="#">
-                <img src="navbar_logo.svg" alt="">
+        <nav class="navbar navbar-expand-lg bg-light p-0 fixed-top d-none d-sm-flex">
+            <a title="Logo do site" class="navbar-brand p-0" href="index.html#">
+                <img src="imgs/logos/navbar_logo.svg" alt="">
             </a>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Início</a>
+                    <a class="nav-link active" aria-current="page" href="index.html#">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">O Parque</a>
+                    <a class="nav-link" href="index.html#oparque">O Parque</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Atrações</a>
+                    <a class="nav-link" href="index.html#atracoes">Atrações</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Eventos</a>
+                    <a class="nav-link" href="index.html#eventos">Eventos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contato</a>
+                    <a class="nav-link" href="index.html#contato">Contato</a>
                 </li>
             </ul>
             <button type="button" class="btn">
                 Reserve Já
             </button>
+        </nav>
+        <nav class="navbar navbar-expand bg-light p-0 fixed-top d-sm-none">
+            <a title="Logo do site" class="navbar-brand p-0 mx-auto d-flex justify-content-center" href="#">
+                <img class="w-50" src="imgs/logos/logo.svg" alt="">
+            </a>
         </nav>
     </header>
     <main>
@@ -52,7 +57,7 @@
                         Fechar Álbum
                         <i class="bi bi-x-circle"></i>
                     </button>
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div id="carouselExampleControls" class="carousel slide albumCarousel" data-bs-ride="carousel">
                         <div class="carousel-inner">
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
@@ -86,17 +91,19 @@
                 </div>
             </div>
 
-            <div class="swiper mySwiper">
+            <div class="swiper mySwiper eventosSwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <img src="placeholder.png" alt="" class="img-fluid">
-                        <h5 class="evento-title mt-3">
-                            PASSEIO DE BUGGY
-                        </h5>
-                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <button class="swiper-custom-button-next">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-chevron-right"></i>
+                    </div>
+                </button>
+                <button class="swiper-custom-button-prev">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <i class="bi bi-chevron-left"></i>
+                    </div>
+                </button>
                 <div class="swiper-pagination"></div>
             </div>
             <img class="papel" src="imgs/papel.png" alt="">
@@ -114,7 +121,7 @@
             <img class="bg-img" src="imgs/bg5.jpg" alt="">
             <div class="container">
                 <div class="row">
-                    <div class="col">
+                    <div class="col-sm">
                         <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <img class="img-fluid" src="imgs/btn01.png" alt="">
                             <div class="btn-label rounded-pill">
@@ -123,7 +130,7 @@
                             </div>
                         </button>
                     </div>
-                    <div class="col">
+                    <div class="col-sm">
                         <button class="btn">
                             <img class="img-fluid" src="imgs/btn02.png" alt="">
                         </button>
@@ -132,7 +139,7 @@
             </div>
         </div>
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
@@ -143,34 +150,28 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            loop: true,
-            slidesPerView: 5,
-            slidesPerGroup: 2,
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 32,
             centeredSlides: false,
             grabCursor: true,
             keyboard: {
                 enabled: true,
             },
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-custom-button-next",
+                prevEl: ".swiper-custom-button-prev",
             },
+            breakpoints: {
+                576: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 1,
+                    loop: true,
+                },
+            }
         });
-
-        let album = [
-            "imgs/album/_MG_0002.jpg", "imgs/album/DSC_0002.jpg", "imgs/album/DSC_0027.jpg", "imgs/album/DSC_0039.jpg", "imgs/album/DSC_0060.jpg", "imgs/album/DSC_0106.jpg", "imgs/album/DSC_0111.jpg", "imgs/album/DSC_0151.jpg", "imgs/album/DSC_0170.jpg", "imgs/album/DSC_0171.jpg", "imgs/album/DSC_0177.jpg", "imgs/album/DSC_0312.jpg", "imgs/album/DSC_0341.jpg", "imgs/album/DSC_0361.jpg", "imgs/album/DSC_0383.jpg", "imgs/album/DSC_0396.jpg", "imgs/album/DSC_0415.jpg", "imgs/album/DSC_0420.jpg", "imgs/album/DSC_0422.jpg", "imgs/album/DSC_0453.jpg", "imgs/album/DSC_0481.jpg", "imgs/album/DSC_0493.jpg", "imgs/album/DSC_0510.jpg"
-        ]
-
-        album.forEach(function (v, i) {
-            $('.carousel-inner').append(
-                `
-                <div class="carousel-item ${i == 0 ? 'active' : ''}">
-                    <img src="${v}" class="d-block w-100 img-fluid" alt="...">
-                </div>
-                `
-            )
-        })
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
