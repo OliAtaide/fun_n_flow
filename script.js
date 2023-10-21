@@ -75,8 +75,6 @@ let carousel = [
     "imgs/index/carousel_05.jpeg",
 ]
 
-console.log(atracoes)
-
 atracoes.forEach(function (v, i) {
     $('.indexSwiper .swiper-wrapper').append(
         `
