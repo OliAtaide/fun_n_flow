@@ -99,13 +99,13 @@ main {
 .atracoes-section,
 .contato-section,
 .eventos-main {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 
 .sobre-section {
-  background: linear-gradient(white, #9fdef4 33%, transparent 66%), url("imgs/pitangui.png") no-repeat;
+  background-image: linear-gradient(white, #9fdef4 33%, transparent 66%), url("imgs/pitangui.png");
   min-height: 12em;
 }
 
@@ -685,6 +685,11 @@ main {
   .contatos {
     text-align: center !important;
     margin-top: 1em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    zoom: 3;
   }
 }
 
