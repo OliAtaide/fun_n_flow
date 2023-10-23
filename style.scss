@@ -243,7 +243,6 @@ main {
     ul,
     h5 {
         font-size: 24px;
-        color: #e6e6e6ff;
     }
 
     .contatos {
@@ -775,8 +774,25 @@ main {
     }
 }
 
-@media screen and (min-width: 2560px) {
-    body{
-        zoom: 3;
+@media screen and (min-width: 1921px) {
+    .atracoes-section{
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    .eventos-section{
+        margin-top: -50em;
+        padding: 25em;
+    }
+
+    .trilhas-section{
+        margin-top: -25em;
+    }
+
+    .contato-section, .trilhas-section{
+        padding: 10em 25em;
+        .container{
+            margin: 0;
+            max-width: 100%;
+        }
     }
 }
